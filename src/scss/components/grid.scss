@@ -41,16 +41,17 @@
 
 @for $i from 1 through $grid_size {
  	.#{$prefix}-#{$i} {
-  		max-width: percentage($i / $grid_size);
-  		flex: 0 0 percentage($i / $grid_size);
-  		padding: {
-  			left: $indent-space;
-  			right: $indent-space;
-  		}
+  	max-width: percentage($i / $grid_size);
+  	flex: 0 0 percentage($i / $grid_size);
+  	padding: {
+  		left: $indent-space;
+  		right: $indent-space;
   	}
-  	.#{$prefix}-offset-#{$i} {
-  		margin: {
-  			right: percentage($i / $grid_size);
-  		}
+  }
+  .#{$prefix}-offset-#{$i} {
+  	margin: {
+  		left: percentage($i / $grid_size);
   	}
+  }
+
 }
